@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
-    dest: 'public'
-})
-const nextConfig = {}
+    dest: 'public',
+});
+const nextConfig = {};
 
-module.exports = withPWA(nextConfig);
+if (process.env == 'PRODUCTION') {
+    module.exports = withPWA(nextConfig);
+} else {
+    module.exports = nextConfig;
+}
