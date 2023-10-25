@@ -1,10 +1,16 @@
-'use client';
-
 import React from 'react';
-import { wrapper } from '@common/redux/store';
+import Header from '@common/component/header';
+import Footer from '@common/component/footer';
+import css from './index.module.css';
 
-function DashboardLayout({ children }: { children: React.ReactNode }) {
-    return <section>{children}</section>;
-}
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <div className={css.layout}>
+            <Header />
+            <div>{children}</div>
+            <Footer />
+        </div>
+    );
+};
 
-export default wrapper.withRedux(DashboardLayout);
+export default DashboardLayout;

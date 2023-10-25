@@ -1,12 +1,12 @@
 import React from 'react';
 import DashboardLayout from './layout';
 
-const DashboardPage = () => {
+const DashboardProfilePage = () => {
     return (
         <DashboardLayout>
-            <div>content</div>
+            <div>profile content</div>
         </DashboardLayout>
     );
 };
 
-export default DashboardPage;
+export default DashboardProfilePage;
