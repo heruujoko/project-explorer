@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@common/component/header';
 import Footer from '@common/component/footer';
-import css from './index.module.css';
+import css from './layout.module.css';
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     return (
