@@ -1,7 +1,10 @@
 .container {
     position: fixed;
-    bottom: 8px;
+    bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     width: 95%;
+    background-color: white;
 
     .footer {
         width: 100%;

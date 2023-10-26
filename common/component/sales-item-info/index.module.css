@@ -1,0 +1,8 @@
+.container {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    .amount {
+        font-size: 36px;
+    }
+}
