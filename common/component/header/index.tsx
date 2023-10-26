@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import css from './index.module.css';
 
@@ -7,6 +7,8 @@ const Header: React.FC = () => {
         <div className={css.container}>
             <div className={css.navHeader}>
                 <Image
+                    priority
+                    quality={50}
                     alt="logo"
                     className={css.image}
                     width={50}
@@ -18,4 +20,4 @@ const Header: React.FC = () => {
     );
 };
 
-export default Header;
+export default memo(Header);

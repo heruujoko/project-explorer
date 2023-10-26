@@ -7,19 +7,22 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "format": "prettier --check --ignore-path .gitignore .",
-        "format:fix": "prettier --write --ignore-path .gitignore ."
+        "fmt": "prettier --check --ignore-path .gitignore .",
+        "fmtf": "prettier --write --ignore-path .gitignore ."
     },
     "dependencies": {
         "@ant-design/icons": "^5.2.6",
         "@reduxjs/toolkit": "^1.9.7",
+        "chart.js": "^4.4.0",
         "next": "13.5.6",
         "next-pwa": "^5.6.0",
         "next-redux-wrapper": "^8.1.0",
         "react": "^18",
+        "react-chartjs-2": "^5.2.0",
         "react-dom": "^18",
         "react-redux": "^8.1.3",
-        "redux-persist": "^6.0.0"
+        "redux-persist": "^6.0.0",
+        "yarn": "^1.22.19"
     },
     "devDependencies": {
         "@types/node": "^20",
@@ -31,6 +34,7 @@
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-react": "^7.33.2",
         "postcss": "^8",
+        "postcss-nesting": "^12.0.1",
         "prettier": "2.8.8",
         "tailwindcss": "^3",
         "typescript": "^5"
