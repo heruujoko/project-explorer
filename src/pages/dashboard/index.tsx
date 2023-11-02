@@ -35,7 +35,8 @@ const DashboardPage = () => {
                     <h2>Penjualan Bulan</h2>
                     <SalesChart />
                 </div>
-                <br /><br />
+                <br />
+                <br />
                 <div>
                     <SalesItemInfo sales={mock[0]} />
                     <SalesItemInfo sales={mock[0]} />
