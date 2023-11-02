@@ -5,6 +5,7 @@
     padding-top: 10px;
     width: 95%;
     background-color: white;
+    max-width: 800px;
 
     .footer {
         width: 100%;

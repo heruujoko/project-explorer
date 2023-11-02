@@ -26,7 +26,16 @@ const DashboardPage = () => {
     return (
         <DashboardLayout>
             <div className={css.content}>
-                <SalesChart />
+                <div>
+                    <h2>Penjualan Tahunan</h2>
+                    <SalesChart />
+                </div>
+
+                <div>
+                    <h2>Penjualan Bulan</h2>
+                    <SalesChart />
+                </div>
+                <br /><br />
                 <div>
                     <SalesItemInfo sales={mock[0]} />
                     <SalesItemInfo sales={mock[0]} />
