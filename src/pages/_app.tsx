@@ -1,6 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { Roboto } from 'next/font/google';
 import { AppProps } from 'next/app';
+import { wrapper } from '@common/redux/store';
+import { Provider } from 'react-redux';
+
+const ErrorDrawer = dynamic(() => import('@common/component/error-drawer'), { ssr: false });
 
 interface CustomAppLayoutProps {}
 
@@ -9,10 +14,16 @@ const roboto = Roboto({
     subsets: ['latin'],
 });
 
-function AppLayout({ Component, pageProps }: AppProps<CustomAppLayoutProps>) {
+function AppLayout({ Component, pageProps, ...rest }: AppProps<CustomAppLayoutProps>) {
+    const { store } = wrapper.useWrappedStore(rest);
+
     return (
         <div className={roboto.className}>
-            <Component {...pageProps} />
+            <Provider store={store}>
+                <Component {...pageProps} />
+
+                <ErrorDrawer />
+            </Provider>
         </div>
     );
 }

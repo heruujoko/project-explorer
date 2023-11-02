@@ -1,0 +1,20 @@
+.container {
+    width: 85%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actionButtonPlacer {
+    position: absolute;
+    bottom: 24px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+
+.actionButtonContainer {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}

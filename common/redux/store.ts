@@ -1,17 +1,22 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { createWrapper } from 'next-redux-wrapper';
-import counterReducer from '@feature/counter/counter.slice';
+import counterReducer from '@feature/redux-slices/counter/counter.slice';
+import errorReducer from '@feature/redux-slices/error/error.slice';
 import { pokemonApi } from '@services/pokemon';
 
 export const makeStore = (preloadState = {}) => {
     return configureStore({
         reducer: {
+            errors: errorReducer,
             counter: counterReducer,
             [pokemonApi.reducerPath]: pokemonApi.reducer,
         },
         middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(pokemonApi.middleware),
-        devTools: true,
+        devTools: {
+            trace: true,
+            name: 'explorer',
+        },
         preloadedState: preloadState,
     });
 };
