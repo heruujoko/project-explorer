@@ -1,11 +1,20 @@
 import React from 'react';
+import { useDispatch } from "react-redux";
 import DashboardLayout from './layout';
 import css from './profile.module.css';
 import { Button, Card, Divider } from 'antd';
 import { PoweroffOutlined } from '@ant-design/icons';
+import {setError} from "@feature/redux-slices/error/error.slice";
 
 const DashboardProfilePage = () => {
-    const handleLogout = () => {};
+    const dispatch = useDispatch();
+
+    const handle = () => {
+        dispatch(setError({
+            message: "message error",
+            title: "title Error"
+        }))
+    }
 
     return (
         <DashboardLayout>
@@ -18,7 +27,7 @@ const DashboardProfilePage = () => {
                     </div>
                     <Divider />
                     <Button
-                        onClick={handleLogout}
+                        onClick={handle}
                         danger
                         type="primary"
                         icon={<PoweroffOutlined />}

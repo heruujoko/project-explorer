@@ -4,6 +4,7 @@ import { Roboto } from 'next/font/google';
 import { AppProps } from 'next/app';
 import { wrapper } from '@common/redux/store';
 import { Provider } from 'react-redux';
+import withUA from '@common/hocs/withUA';
 
 const ErrorDrawer = dynamic(() => import('@common/component/error-drawer'), { ssr: false });
 
@@ -27,4 +28,4 @@ function AppLayout({ Component, pageProps, ...rest }: AppProps<CustomAppLayoutPr
         </div>
     );
 }
-export default AppLayout;
+export default withUA(AppLayout);
